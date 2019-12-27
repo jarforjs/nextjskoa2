@@ -1,4 +1,4 @@
-import { withRouter } from 'next/router'
+import {withRouter} from 'next/router'
 import Comp from '../components/comp'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -22,14 +22,14 @@ const A = ({ router, name }) => (
 )
 
 A.getInitialProps = async (ctx) => {
-    const promise = new Promise(resolve => {
-        setTimeout(() => {
-            resolve({
-                name: 'ghb'
-            })
-        }, 1000)
-    })
+	const promise = new Promise(resolve => {
+		setTimeout(() => {
+			resolve({
+				name: 'ghb'
+			})
+		}, 1000)
+	})
 
-    return await promise
+	return await promise
 }
 export default withRouter(A)
